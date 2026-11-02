@@ -1,0 +1,39 @@
+{
+  "changed_coordinates": {
+    "A:X:V*BL:T0:V*CL:X:V": 0.5418614326141842,
+    "A:X:V*BL:T1:V*CL:X:V": -0.5418614326141841,
+    "A:X:V*BL:X:V*CL:X:V": 0.8099999999999998
+  },
+  "expected_changed_coordinates": [
+    "A:X:V*BL:T0:V*CL:X:V",
+    "A:X:V*BL:T1:V*CL:X:V",
+    "A:X:V*BL:X:V*CL:X:V"
+  ],
+  "only_expected_coordinates_changed": true,
+  "accepted_models": {
+    "M": true,
+    "W": false,
+    "R": true,
+    "F": false
+  },
+  "tolerance": 1e-12,
+  "honest_construction": "honest",
+  "attack_construction": "honest-near/dephased-far-parent-attack",
+  "schema": "routed-dicka-dephasing-check-v1",
+  "physical_point": {
+    "nu": 1.0,
+    "eta_s": 1.0,
+    "eta_b": 0.9,
+    "eta_c": 0.9,
+    "eta_a": 1.0,
+    "theta": null,
+    "far_angle_policy": "matched",
+    "near_angle_policy": "matched",
+    "far_theta": 0.7328151017865066,
+    "near_theta": 0.7853981633974483
+  },
+  "honest_target": "targets/nu1_s1_eb0p9_ec0p9_th0p732815.json",
+  "honest_target_sha256": "55f00cc231cd528d582b57b5d8b7d54905ca742dc3ea60af68e49df1cc54ff32",
+  "attack_target": "targets/nu1_s1_eb0p9_ec0p9_th0p732815_route_dephasing_attack.json",
+  "attack_target_sha256": "763017af7a6f126a29cb31e60e2c2131f8a962abf0c55c58a26298edc1ad524d"
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "routed-dicka-model-contract-audit-v2",
+  "passed": true,
+  "default_m": 4,
+  "radau_orders": {
+    "2": {
+      "m": 2,
+      "degree_checked": 2,
+      "max_moment_error": 5.551115123125783e-17,
+      "endpoint_weight": 0.25
+    },
+    "3": {
+      "m": 3,
+      "degree_checked": 4,
+      "max_moment_error": 2.220446049250313e-16,
+      "endpoint_weight": 0.1111111111111111
+    },
+    "4": {
+      "m": 4,
+      "degree_checked": 6,
+      "max_moment_error": 1.1102230246251565e-16,
+      "endpoint_weight": 0.0625
+    }
+  },
+  "protocols": {
+    "rPCHSH": [
+      "Z",
+      "T0",
+      "T1"
+    ],
+    "rPhase": [
+      "Z",
+      "X"
+    ],
+    "rHybrid": [
+      "Z",
+      "X",
+      "T0",
+      "T1"
+    ]
+  },
+  "protocol_nesting": {
+    "rPCHSH": true,
+    "rPhase": true
+  },
+  "mwrf": {
+    "checks": {
+      "M_subset_W": true,
+      "M_subset_R": true,
+      "W_subset_F": true,
+      "R_subset_F": true,
+      "W_R_incomparable": true,
+      "W_union_R_equals_F": true
+    },
+    "counts": {
+      "M": 89,
+      "W": 92,
+      "R": 146,
+      "F": 149
+    }
+  },
+  "target_validation": {
+    "minimum_probability": 0.00042900000000000034,
+    "maximum_normalization_error": 4.440892098500626e-16
+  },
+  "bff_localizer_uses_alpha_squared": true,
+  "bff_norm_constraints_are_localizing_matrices": true,
+  "remote_no_clicks_retained": true,
+  "same_point_angle_matches_attack": true,
+  "curve_matrix": {
+    "m": 4,
+    "anchor_efficiencies": [
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "numerical_families": 16,
+    "long_only_slices": 1
+  },
+  "profiles": {
+    "smoke0": {
+      "entropy_points": 0,
+      "sdp_node_solves": 0,
+      "attack_records": 0,
+      "report_rows": 0
+    },
+    "smoke1": {
+      "entropy_points": 2,
+      "sdp_node_solves": 2,
+      "attack_records": 0,
+      "report_rows": 2
+    },
+    "smoke2": {
+      "entropy_points": 1,
+      "sdp_node_solves": 1,
+      "attack_records": 1,
+      "report_rows": 1
+    },
+    "core": {
+      "entropy_points": 3,
+      "sdp_node_solves": 6,
+      "attack_records": 0,
+      "report_rows": 3
+    },
+    "paper": {
+      "entropy_points": 155,
+      "sdp_node_solves": 446,
+      "attack_records": 2,
+      "report_rows": 158
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Preserve byte hashes of the frozen scientific sources and data on all systems.
+* -text
+*.png binary
+*.pdf binary

@@ -1,0 +1,67 @@
+{
+  "exactly_verified": true,
+  "full_contexts": 16,
+  "probabilities": 288,
+  "local_atoms": 123,
+  "minimum_weight_lower": 4.875e-05,
+  "quantum_weight_upper": 0.16199633946732167,
+  "quantum_weight_upper_rational": "31032333483783405410811891669256341424371170685409106979606237/191561942608236107294793378393788647952342390272950272000000000",
+  "exact_degrading_channel_verified": true,
+  "nu": "99/100",
+  "eta": "39/50",
+  "eve_known_probability_lower": 0.8380036605326784,
+  "receiver_efficiency": 0.78,
+  "degrading_keep_probability_upper": 0.9307835236712353,
+  "bit_flip_probability": "1/200",
+  "no_key_class": "Fixed ZZZ raw data with Alice-to-receivers public communication; Alice stochastic or block preprocessing is allowed, receiver feedback and key-round selection are excluded.",
+  "degrading_channel": [
+    [
+      [
+        "2817634736475/1695689195999",
+        "-3163482870951/3391378391998"
+      ],
+      [
+        "14158968525/1695689195999",
+        "-15896898849/3391378391998"
+      ],
+      [
+        "-1136104509001/1695689195999",
+        "1589689884900/1695689195999"
+      ]
+    ],
+    [
+      [
+        "14158968525/1695689195999",
+        "-15896898849/3391378391998"
+      ],
+      [
+        "2817634736475/1695689195999",
+        "-3163482870951/3391378391998"
+      ],
+      [
+        "-1136104509001/1695689195999",
+        "1589689884900/1695689195999"
+      ]
+    ],
+    [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ]
+  ],
+  "schema": "routed-dicka-exact-attack-audit-v1",
+  "source_file": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\source_data\\attack\\attack_eta078.json",
+  "source_sha256": "939a37ed79e397d7d00618451daad4c13d670eee0fd099fe34790dc37c190bc2",
+  "configured_nu": "99/100",
+  "configured_eta": "39/50",
+  "configured_theta": 0.6624262938331512
+}

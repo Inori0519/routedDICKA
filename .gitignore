@@ -1,0 +1,43 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Local solver configuration and credentials
+mosek.lic
+*.lic
+.env
+.env.*
+!.env.example
+
+# Fresh calculations, build files and nested packages
+/reproduction/
+/build/
+/dist/
+/outputs/packages/
+/outputs_full_ternary/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+/paper/*.pdf
+
+# Local editor and agent state
+.vscode/
+.idea/
+.omx/
+.codex/
+.DS_Store
+Thumbs.db
+Desktop.ini

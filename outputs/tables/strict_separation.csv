@@ -1,0 +1,3 @@
+experiment_kind,point_id,protocol,nu,eta_s,eta_b,eta_c,theta,communication_class,sdp_optimized,data_scope,evidence_kind,bound_relation,H_A_given_E_lower,EC_cost_upper,guaranteed_key_rate,probabilities_verified,m,certificate_source_file
+strict_separation,S1,rHybrid,0.99,0.99,0.78,0.78,0.6624262938331512,fixed_ZZZ_raw_data_Alice_forward,False,far_only,exact_receiver_simulation_attack,equals,,,0.0,288,,
+strict_separation,S1,rHybrid,0.99,0.99,0.78,0.78,0.6624262938331512,fixed_ZZZ_raw_data_Alice_forward,False,routed,verified_affine_certificate,lower_bound,0.3327199023192324,0.25542346002135907,0.0772964422978733,,4,source_data/certificates/m4

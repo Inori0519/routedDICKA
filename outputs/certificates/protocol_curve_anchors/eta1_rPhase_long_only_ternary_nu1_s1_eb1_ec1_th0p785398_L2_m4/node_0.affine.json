@@ -1,0 +1,81 @@
+{
+  "schema": "routed-dicka-verified-node-witness-v1",
+  "source_certificate": "node_0.certificate.json",
+  "metadata": {
+    "protocol": "rPhase",
+    "statistics_recording": "ternary",
+    "required_features": [
+      "phase"
+    ],
+    "m": 4,
+    "node_index": 0,
+    "solver_backend": "mosek-low-level-sdp",
+    "solver_status": "solsta.optimal"
+  },
+  "node": "199482350725455/2251799813685248",
+  "node_interval": [
+    "199482350725455/2251799813685248",
+    "199482350725471/2251799813685248"
+  ],
+  "alpha": 17,
+  "coefficients": [
+    {
+      "word": [],
+      "value": "-283728241901891527/72057594037927936"
+    },
+    {
+      "word": [
+        0
+      ],
+      "value": "-16709699636371351/36028797018963968"
+    },
+    {
+      "word": [
+        1
+      ],
+      "value": "-77782443311032257/36028797018963968"
+    },
+    {
+      "word": [
+        2
+      ],
+      "value": "-145947665600568223/36028797018963968"
+    },
+    {
+      "word": [
+        0,
+        2
+      ],
+      "value": "33419484849792225/72057594037927936"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "value": "659130846798275123/72057594037927936"
+    },
+    {
+      "word": [
+        3
+      ],
+      "value": "105835301185369431/36028797018963968"
+    },
+    {
+      "word": [
+        0,
+        3
+      ],
+      "value": "16709731561727685/36028797018963968"
+    },
+    {
+      "word": [
+        1,
+        3
+      ],
+      "value": "-355193348737587039/72057594037927936"
+    }
+  ],
+  "residual_penalty": "4780520112637/9007199254740992",
+  "interpretation": "Global affine lower bound in the encoded operator algebra; the anchor optimizer value is not used as interpolation data."
+}

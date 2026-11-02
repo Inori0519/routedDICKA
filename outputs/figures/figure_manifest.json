@@ -1,0 +1,29 @@
+{
+  "schema": "routed-dicka-figure-manifest-v2",
+  "created_utc": "2026-10-29T05:03:07.158211Z",
+  "config_sha256": "07ecfd027d6509c44559ef10a77ac786700a44d450367b0be29cbd72ffa9e12b",
+  "input_tables": {
+    "tables/results.csv": "385c6f2219d0e8a12b89f4b5c5bfd923aae3e2809d32850ee27d78e10c1f0c41",
+    "tables/ideal_rates.csv": "e2cec1c4ebfb7ef2bcd0e0a2d78dc88ab99c5d6ea87150f9b45d1691e1c258ca",
+    "tables/protocol_envelopes.csv": "29746a1e46e68880098d6b0b425db8dfacbb2b9d47082b07df59df713e100fa8"
+  },
+  "files": {
+    "figures/routed_protocols_near_efficiency.pdf": "f3784725605b96c2b2d093451bf73b28aaa7afaafc52693a3fa381c5790c6da4",
+    "figures/routed_protocols_near_efficiency.png": "7826163b8f43478b5d3aa6bb192c41bb70db3781a314a38a6b3413b5536a2ff3",
+    "figures/routed_protocols_visibility.pdf": "c0c0f9ef11142f6dda22ea75783a0403182875256058b1eaf4b9250fb1f4aeb9",
+    "figures/routed_protocols_visibility.png": "e1f1bcc3e09b7ae2721c1de0313aebf3551a55b8f30808dab87fc1e694045968",
+    "figures/routed_vs_long_only_rhybrid.pdf": "433ac698bf8092b0c9028478d56b757d11c94431c087b4a72843e6496631feb2",
+    "figures/routed_vs_long_only_rhybrid.png": "08a9b07c072c94b8f487862ba50b9c4c337b0553b33ace6f561a99c405da7286",
+    "figures/routed_vs_long_only_rpchsh.pdf": "f1d2f04c6b2604f492c7ee94a2a0c3c3a78859a9dbc26eaa80f683431943c243",
+    "figures/routed_vs_long_only_rpchsh.png": "9fb1bf3aeb8a12af3cfcc819976bd2437b6ccd614a6f195cfc2aad156dacbafa",
+    "figures/routed_vs_long_only_rphase.pdf": "33793ea20e8d09d632239b10cda7c18bf9a8d4036160c09b564a5eb9e508064e",
+    "figures/routed_vs_long_only_rphase.png": "2b7ad545e754e9ea7faa7a173e44459cc29d8b8a090c54bc440b6783c182d27b"
+  },
+  "figure_data": {
+    "figure_data/routed_protocols_near_efficiency.json": "2cda64f69b958db6f516f37cbbd384d43b08796dd7c3414ba24152a2b6b7103f",
+    "figure_data/routed_protocols_visibility.json": "18eef8f0134ff1bbd32db24135b7dee01c4d6d81d3e9591b4a70360901299d73",
+    "figure_data/routed_vs_long_only_rhybrid.json": "336df7845ce2520940f149d5ba6b460001cbe02b938da407414674ae2c13eda7",
+    "figure_data/routed_vs_long_only_rpchsh.json": "da26c45b17dd96a0bc0a77846252418d5e6b8dd652be5d2ad9e3491190e6a9bb",
+    "figure_data/routed_vs_long_only_rphase.json": "5f3c4599a47ba95f9c96d0981311af64803232a1283441380c4c273d1779768f"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "routed-dicka-reference-data-v1",
+  "created_utc": "2026-10-28T04:17:44.132110Z",
+  "passed": true,
+  "ideal_symmetric_threshold": 0.6180339887498949,
+  "strict_separation_ready": true,
+  "inputs": {
+    "../config/paper_suite.json": "07ecfd027d6509c44559ef10a77ac786700a44d450367b0be29cbd72ffa9e12b",
+    "audits/m4_same_point_certificate.json": "334f30e2b4394a13c51bcc54476155eb9f982c9302a51da8924385771d91d12f",
+    "audits/v21_attack.json": "860bc06b3aab59b14db7e43b11850874ea0797f43136665591020bb33e78fd28"
+  },
+  "files": {
+    "tables/ideal_rates.csv": "e2cec1c4ebfb7ef2bcd0e0a2d78dc88ab99c5d6ea87150f9b45d1691e1c258ca",
+    "tables/strict_separation.csv": "6b7bc85d8e61ff1d73cbeee58151a7c89b0053f60109e18ee103370142149d2c"
+  },
+  "rows": {
+    "ideal_rates": 402,
+    "strict_separation": 2
+  }
+}

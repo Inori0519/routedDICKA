@@ -1,0 +1,16 @@
+{
+  "schema": "routed-dicka-witness-envelope-independent-audit-v1",
+  "passed": true,
+  "errors": [],
+  "rows": 3216,
+  "routed_far_ordering_checked": true,
+  "far_only_inherited_rows": 157,
+  "witness_counts": {
+    "rPCHSH|routed": 135,
+    "rPCHSH|long_only": 27,
+    "rPhase|routed": 114,
+    "rPhase|long_only": 27,
+    "rHybrid|routed": 111,
+    "rHybrid|long_only": 27
+  }
+}

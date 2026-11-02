@@ -1,0 +1,122 @@
+{
+  "schema": "routed-dicka-verified-node-witness-v1",
+  "source_certificate": "node_1.certificate.json",
+  "metadata": {
+    "protocol": "rPhase",
+    "statistics_recording": "ternary",
+    "required_features": [
+      "near",
+      "phase"
+    ],
+    "m": 3,
+    "node_index": 1,
+    "solver_backend": "mosek-low-level-sdp",
+    "solver_status": "solsta.optimal"
+  },
+  "node": "90768498757275/140737488355328",
+  "node_interval": [
+    "90768498757275/140737488355328",
+    "22692124689319/35184372088832"
+  ],
+  "alpha": 5,
+  "coefficients": [
+    {
+      "word": [],
+      "value": "-135835910083187561/72057594037927936"
+    },
+    {
+      "word": [
+        0
+      ],
+      "value": "-312660280834610577/72057594037927936"
+    },
+    {
+      "word": [
+        1
+      ],
+      "value": "-4918298005607/72057594037927936"
+    },
+    {
+      "word": [
+        2
+      ],
+      "value": "-270717203129742575/72057594037927936"
+    },
+    {
+      "word": [
+        0,
+        2
+      ],
+      "value": "36250160555601003/9007199254740992"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "value": "71253651590595975/18014398509481984"
+    },
+    {
+      "word": [
+        3
+      ],
+      "value": "7142308278059999/36028797018963968"
+    },
+    {
+      "word": [
+        0,
+        3
+      ],
+      "value": "144998052428670643/36028797018963968"
+    },
+    {
+      "word": [
+        1,
+        3
+      ],
+      "value": "-285012431622074763/72057594037927936"
+    },
+    {
+      "word": [
+        4
+      ],
+      "value": "-368165490190947845/72057594037927936"
+    },
+    {
+      "word": [
+        0,
+        4
+      ],
+      "value": "862106204963571/72057594037927936"
+    },
+    {
+      "word": [
+        1,
+        4
+      ],
+      "value": "98510428079059775/18014398509481984"
+    },
+    {
+      "word": [
+        5
+      ],
+      "value": "6470043544064615/18014398509481984"
+    },
+    {
+      "word": [
+        0,
+        5
+      ],
+      "value": "863892314164837/72057594037927936"
+    },
+    {
+      "word": [
+        1,
+        5
+      ],
+      "value": "-394100999297728133/72057594037927936"
+    }
+  ],
+  "residual_penalty": "3541645539221/72057594037927936",
+  "interpretation": "Global affine lower bound in the encoded operator algebra; the anchor optimizer value is not used as interpolation data."
+}

@@ -1,0 +1,6 @@
+numpy==1.26.4
+scipy==1.11.4
+matplotlib==3.9.4
+sympy==1.13.3
+ncpol2sdpa==1.12.3
+Mosek==10.2.12

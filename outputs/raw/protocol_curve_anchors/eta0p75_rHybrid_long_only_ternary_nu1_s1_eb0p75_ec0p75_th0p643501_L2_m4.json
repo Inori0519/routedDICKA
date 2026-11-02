@@ -1,0 +1,588 @@
+{
+  "schema": "routed-dicka-reduced-certified-point-v1",
+  "evidence_kind": "verified_generated_certificate",
+  "metadata": {
+    "protocol": "rHybrid",
+    "statistics_recording": "ternary",
+    "include_near": false,
+    "experiment_kind": "certificate_anchor",
+    "slice_id": "long_only_nu1",
+    "point_id": "eta0.75",
+    "data_scope": "far_only"
+  },
+  "physical_point": {
+    "nu": 1.0,
+    "eta_s": 1.0,
+    "eta_b": 0.75,
+    "eta_c": 0.75,
+    "eta_a": 1.0,
+    "theta": null,
+    "far_angle_policy": "matched",
+    "near_angle_policy": "matched",
+    "far_theta": 0.6435011087932844,
+    "near_theta": 0.7853981633974483
+  },
+  "target_construction": "honest",
+  "constraint_manifest": {
+    "constraint_id": "ba72b753d3d6ad21678a1650a8a1ba1b09439970bc1baa60185d2d4068cf6cf1",
+    "constraint_value_sha256": "f927ef6df4b5660226ba7793a8dbbef5ba13284453cae07075be316f78ca8adf",
+    "constraint_count": 15,
+    "coordinates": [
+      {
+        "name": "I",
+        "value": 1.0
+      },
+      {
+        "name": "A.Z.0",
+        "value": 0.4999999999999999
+      },
+      {
+        "name": "A.X.0",
+        "value": 0.49999999999999983
+      },
+      {
+        "name": "L.phase.0",
+        "value": 0.28124999999999994
+      },
+      {
+        "name": "L.phase.1",
+        "value": 0.28124999999999994
+      },
+      {
+        "name": "L.test0.0",
+        "value": 0.6249999999999999
+      },
+      {
+        "name": "L.test1.0",
+        "value": 0.6249999999999999
+      },
+      {
+        "name": "A.Z.0 L.phase.0",
+        "value": 0.14062499999999997
+      },
+      {
+        "name": "A.Z.0 L.phase.1",
+        "value": 0.14062499999999997
+      },
+      {
+        "name": "A.Z.0 L.test0.0",
+        "value": 0.46249999999999997
+      },
+      {
+        "name": "A.Z.0 L.test1.0",
+        "value": 0.46249999999999997
+      },
+      {
+        "name": "A.X.0 L.phase.0",
+        "value": 0.28124999999999994
+      },
+      {
+        "name": "A.X.0 L.phase.1",
+        "value": 0.0
+      },
+      {
+        "name": "A.X.0 L.test0.0",
+        "value": 0.396875
+      },
+      {
+        "name": "A.X.0 L.test1.0",
+        "value": 0.22812500000000002
+      }
+    ]
+  },
+  "solver": {
+    "name": "mosek",
+    "backend": "reduced-sparse-real-part",
+    "npa_level": 2
+  },
+  "entropy": {
+    "m": 4,
+    "radau_rule": [
+      {
+        "index": 0,
+        "t": 0.08858795951270393,
+        "weight": 0.22046221117676834,
+        "endpoint": false
+      },
+      {
+        "index": 1,
+        "t": 0.40946686444073477,
+        "weight": 0.38819346884317185,
+        "endpoint": false
+      },
+      {
+        "index": 2,
+        "t": 0.787659461760847,
+        "weight": 0.3288443199800599,
+        "endpoint": false
+      },
+      {
+        "index": 3,
+        "t": 1.0,
+        "weight": 0.0625,
+        "endpoint": true
+      }
+    ],
+    "nodes": [
+      {
+        "index": 0,
+        "t": 0.08858795951270393,
+        "weight": 0.22046221117676834,
+        "search": {
+          "backend": "mosek-low-level-sdp",
+          "mosek_version": "11.0.28",
+          "status": "solsta.optimal",
+          "problem_status": "prosta.prim_and_dual_feas",
+          "status_optimal": true,
+          "primal_objective": -0.9999980282926382,
+          "dual_objective": -0.9999981397282486,
+          "relative_gap": 3.714525091525558e-08,
+          "primal_feasibility": 2.7962084048205327e-07,
+          "dual_feasibility": 5.592409060284353e-07,
+          "iterations": 7,
+          "solve_seconds": 1.4182455
+        },
+        "model": {
+          "protocol": "rHybrid",
+          "statistics_recording": "ternary",
+          "required_features": [
+            "phase",
+            "tilted"
+          ],
+          "t": 0.08858795951270393,
+          "alpha": 17,
+          "word_count": 87,
+          "variables": 1084,
+          "moments": 1099,
+          "fixed_moments": 15,
+          "matrix_shape": [
+            3940,
+            1084
+          ],
+          "matrix_nonzeros": 3618,
+          "blocks": [
+            87,
+            7,
+            7,
+            7,
+            7
+          ],
+          "enriched": true,
+          "localizers": true
+        },
+        "generated_certificate": {
+          "certified_node_lower": -1.002274666006842,
+          "exact_numerator": "-89405887782243834819445202699139414323117903",
+          "exact_denominator": "89202980794122492566142873090593446023921664",
+          "fixed_part": -0.999999815741399,
+          "residual_penalty": 0.0022748502654427183,
+          "free_residual_l1": 1.6399995542884275e-05,
+          "data_radius": 1e-12,
+          "dyadic_bits": 28,
+          "alpha": 17,
+          "node_interval": [
+            "199482350725455/2251799813685248",
+            "199482350725471/2251799813685248"
+          ],
+          "grams": [
+            {
+              "size": 87,
+              "rank": 76,
+              "raw_min_eigenvalue": -1.398929455947191e-07,
+              "max_factor": 0.9743371110333724
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -1.3742067147062855e-07,
+              "max_factor": 0.0004365908893888287
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -1.374489382402441e-07,
+              "max_factor": 0.00042683612346477426
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -1.3744374063282028e-07,
+              "max_factor": 0.000426045712745598
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -1.374737457601546e-07,
+              "max_factor": 0.000426872686983524
+            }
+          ],
+          "seconds": 0.08120999999982814
+        },
+        "verified_certificate": {
+          "verified": true,
+          "certificate_file": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\outputs\\certificates\\protocol_curve_anchors\\eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4\\node_0.certificate.json",
+          "node_lower": -1.0022746660068418,
+          "exact_node_lower": "-89405887782243834819445202699139414323117903/89202980794122492566142873090593446023921664",
+          "residual_penalty": 0.0022748502654427183,
+          "node_interval": [
+            "199482350725455/2251799813685248",
+            "199482350725471/2251799813685248"
+          ],
+          "word_count": 87,
+          "gram_blocks": [
+            {
+              "size": 87,
+              "rank_bound": 76
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            }
+          ],
+          "metadata": {
+            "protocol": "rHybrid",
+            "statistics_recording": "ternary",
+            "required_features": [
+              "phase",
+              "tilted"
+            ],
+            "m": 4,
+            "node_index": 0,
+            "solver_backend": "mosek-low-level-sdp",
+            "solver_status": "solsta.optimal"
+          },
+          "affine_export": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\outputs\\certificates\\protocol_curve_anchors\\eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4\\node_0.affine.json"
+        },
+        "certificate_file": "certificates/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4/node_0.certificate.json",
+        "certificate_sha256": "ad4a2a82fc792b10c9a0ef46ae0947b9f692105d215935d80d2c589864cbc9a6",
+        "affine_file": "certificates/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4/node_0.affine.json",
+        "affine_sha256": "347b37ab60b4140e7550a08c7243a91eea9538cca6713416d17d6e30a8092d02",
+        "claim_eligible": true
+      },
+      {
+        "index": 1,
+        "t": 0.40946686444073477,
+        "weight": 0.38819346884317185,
+        "search": {
+          "backend": "mosek-low-level-sdp",
+          "mosek_version": "11.0.28",
+          "status": "solsta.optimal",
+          "problem_status": "prosta.prim_and_dual_feas",
+          "status_optimal": true,
+          "primal_objective": -0.9999999962860462,
+          "dual_objective": -0.9999999965646715,
+          "relative_gap": 9.287511522740114e-11,
+          "primal_feasibility": 8.097955084274133e-10,
+          "dual_feasibility": 1.5356760307838613e-09,
+          "iterations": 7,
+          "solve_seconds": 1.4901865
+        },
+        "model": {
+          "protocol": "rHybrid",
+          "statistics_recording": "ternary",
+          "required_features": [
+            "phase",
+            "tilted"
+          ],
+          "t": 0.40946686444073477,
+          "alpha": 4,
+          "word_count": 87,
+          "variables": 1084,
+          "moments": 1099,
+          "fixed_moments": 15,
+          "matrix_shape": [
+            3940,
+            1084
+          ],
+          "matrix_nonzeros": 3618,
+          "blocks": [
+            87,
+            7,
+            7,
+            7,
+            7
+          ],
+          "enriched": true,
+          "localizers": true
+        },
+        "generated_certificate": {
+          "certified_node_lower": -1.0000156304338448,
+          "exact_numerator": "-356817500301650100420564995604183352519624421",
+          "exact_denominator": "356811923176489970264571492362373784095686656",
+          "fixed_part": -1.0000000003549212,
+          "residual_penalty": 1.563007892335655e-05,
+          "free_residual_l1": 1.4977718433405868e-06,
+          "data_radius": 1e-12,
+          "dyadic_bits": 28,
+          "alpha": 4,
+          "node_interval": [
+            "3688149636231685/9007199254740992",
+            "3688149636231749/9007199254740992"
+          ],
+          "grams": [
+            {
+              "size": 87,
+              "rank": 77,
+              "raw_min_eigenvalue": -4.0618608777465076e-10,
+              "max_factor": 0.9591976665302478
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -3.7561976761663794e-10,
+              "max_factor": 4.477979187875461e-05
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -3.781899040383031e-10,
+              "max_factor": 2.7943330904571224e-05
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -3.7764772054156353e-10,
+              "max_factor": 5.4269412759638445e-05
+            },
+            {
+              "size": 7,
+              "rank": 5,
+              "raw_min_eigenvalue": -3.8070971578959517e-10,
+              "max_factor": 2.7756605912094393e-05
+            }
+          ],
+          "seconds": 0.0760841999999684
+        },
+        "verified_certificate": {
+          "verified": true,
+          "certificate_file": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\outputs\\certificates\\protocol_curve_anchors\\eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4\\node_1.certificate.json",
+          "node_lower": -1.0000156304338446,
+          "exact_node_lower": "-356817500301650100420564995604183352519624421/356811923176489970264571492362373784095686656",
+          "residual_penalty": 1.563007892335655e-05,
+          "node_interval": [
+            "3688149636231685/9007199254740992",
+            "3688149636231749/9007199254740992"
+          ],
+          "word_count": 87,
+          "gram_blocks": [
+            {
+              "size": 87,
+              "rank_bound": 77
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            },
+            {
+              "size": 7,
+              "rank_bound": 5
+            }
+          ],
+          "metadata": {
+            "protocol": "rHybrid",
+            "statistics_recording": "ternary",
+            "required_features": [
+              "phase",
+              "tilted"
+            ],
+            "m": 4,
+            "node_index": 1,
+            "solver_backend": "mosek-low-level-sdp",
+            "solver_status": "solsta.optimal"
+          },
+          "affine_export": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\outputs\\certificates\\protocol_curve_anchors\\eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4\\node_1.affine.json"
+        },
+        "certificate_file": "certificates/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4/node_1.certificate.json",
+        "certificate_sha256": "95cdd00c05ea7aa8c9d26eb7fdf56184cc63bd1a29d4b935ad92e9383a2ef977",
+        "affine_file": "certificates/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4/node_1.affine.json",
+        "affine_sha256": "07449d5b9fa1cb60790889148bfe92829f43aef1e3aecba2441e336932eb856c",
+        "claim_eligible": true
+      },
+      {
+        "index": 2,
+        "t": 0.787659461760847,
+        "weight": 0.3288443199800599,
+        "search": {
+          "backend": "mosek-low-level-sdp",
+          "mosek_version": "11.0.28",
+          "status": "solsta.optimal",
+          "problem_status": "prosta.prim_and_dual_feas",
+          "status_optimal": true,
+          "primal_objective": -0.9999996965474659,
+          "dual_objective": -0.9999997182105494,
+          "relative_gap": 7.221029258425895e-09,
+          "primal_feasibility": 4.224064952855045e-08,
+          "dual_feasibility": 8.446490484814717e-08,
+          "iterations": 7,
+          "solve_seconds": 1.4316672
+        },
+        "model": {
+          "protocol": "rHybrid",
+          "statistics_recording": "ternary",
+          "required_features": [
+            "phase",
+            "tilted"
+          ],
+          "t": 0.787659461760847,
+          "alpha": 8,
+          "word_count": 87,
+          "variables": 1084,
+          "moments": 1099,
+          "fixed_moments": 15,
+          "matrix_shape": [
+            3940,
+            1084
+          ],
+          "matrix_nonzeros": 3618,
+          "blocks": [
+            87,
+            7,
+            7,
+            7,
+            7
+          ],
+          "enriched": true,
+          "localizers": true
+        },
+        "generated_certificate": {
+          "certified_node_lower": -1.000129582159703,
+          "exact_numerator": "-356858159636102886400137755253742334517978569",
+          "exact_denominator": "356811923176489970264571492362373784095686656",
+          "fixed_part": -1.0000000390941635,
+          "residual_penalty": 0.00012954306553934758,
+          "free_residual_l1": 3.7310311299936384e-06,
+          "data_radius": 1e-12,
+          "dyadic_bits": 28,
+          "alpha": 8,
+          "node_interval": [
+            "886825714620245/1125899906842624",
+            "886825714620253/1125899906842624"
+          ],
+          "grams": [
+            {
+              "size": 87,
+              "rank": 75,
+              "raw_min_eigenvalue": -2.493423336497334e-08,
+              "max_factor": 0.9544421054891369
+            },
+            {
+              "size": 7,
+              "rank": 4,
+              "raw_min_eigenvalue": -2.452416479388436e-08,
+              "max_factor": 0.00016680525693427
+            },
+            {
+              "size": 7,
+              "rank": 4,
+              "raw_min_eigenvalue": -2.454008232668872e-08,
+              "max_factor": 0.000142803989755833
+            },
+            {
+              "size": 7,
+              "rank": 4,
+              "raw_min_eigenvalue": -2.4535804714288256e-08,
+              "max_factor": 0.00014672761275983008
+            },
+            {
+              "size": 7,
+              "rank": 4,
+              "raw_min_eigenvalue": -2.4552257500358263e-08,
+              "max_factor": 0.00014192857871649848
+            }
+          ],
+          "seconds": 0.07648040000003675
+        },
+        "verified_certificate": {
+          "verified": true,
+          "certificate_file": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\outputs\\certificates\\protocol_curve_anchors\\eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4\\node_2.certificate.json",
+          "node_lower": -1.0001295821597027,
+          "exact_node_lower": "-356858159636102886400137755253742334517978569/356811923176489970264571492362373784095686656",
+          "residual_penalty": 0.00012954306553934758,
+          "node_interval": [
+            "886825714620245/1125899906842624",
+            "886825714620253/1125899906842624"
+          ],
+          "word_count": 87,
+          "gram_blocks": [
+            {
+              "size": 87,
+              "rank_bound": 75
+            },
+            {
+              "size": 7,
+              "rank_bound": 4
+            },
+            {
+              "size": 7,
+              "rank_bound": 4
+            },
+            {
+              "size": 7,
+              "rank_bound": 4
+            },
+            {
+              "size": 7,
+              "rank_bound": 4
+            }
+          ],
+          "metadata": {
+            "protocol": "rHybrid",
+            "statistics_recording": "ternary",
+            "required_features": [
+              "phase",
+              "tilted"
+            ],
+            "m": 4,
+            "node_index": 2,
+            "solver_backend": "mosek-low-level-sdp",
+            "solver_status": "solsta.optimal"
+          },
+          "affine_export": "D:\\kxproject\\1026\\routed_DICKA_unified_framework_v3_with_checks\\outputs\\certificates\\protocol_curve_anchors\\eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4\\node_2.affine.json"
+        },
+        "certificate_file": "certificates/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4/node_2.certificate.json",
+        "certificate_sha256": "ebe6e5bd5a1f1c79ef9983740fc084c83d173805e9c351a5266c4297796e5e4f",
+        "affine_file": "certificates/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4/node_2.affine.json",
+        "affine_sha256": "3b5abbca9eff8b31d73c47dc270eb945d80c37b86cf9934b32b94c0805401aee",
+        "claim_eligible": true
+      }
+    ],
+    "raw_entropy_lower": -0.008266222831402582,
+    "entropy_lower": 0.0,
+    "entropy_lower_exact": "-3199716688880572066594741331213562865557798955778230748696990519544192498421560252176892847122907177418863153053721037422031693579415033899998710748440100901127881221533011925626593639272120607321407696281140375407547662492224707483255307736310721692895118717416572017584362060533258856087888621946150998896024652741184489713774065600885631037211672779991383848272868546235125793723466419005822981250296038060467929712785588977741020402485435426787778929087727232360721768580400135358774474473198868646438395568091425427955224161562503442915040753922442487243022226162286160258616818146431299887917156303561728949169730265930578970155450101724179658716827971949125767685473405606216814478209529197089752552921089437071103591733201469440/387083285091850835509567521476693619325100274649070766877954446562743097695253528379760798698821974146502607530012895400660180034410603185275555488419260701247619658950794964271018328101197347015175640822091418719542096413385039157687578195399246944627493691313678283862477403866591223884926698755495475190293859451734791115258152255606571539931264987001276559078580126622294141343400398119541443383755863258839138772733383834582456401156612961858439243474889771427857101275879206980156241100979803117180891751788907050870707961830533883008528734484865326157331841882493745882086559255560520920362837935820129233959647366264395106847588055766718100928791030737199835424044767670593274125445866187157503263308852786327050800499288643762261",
+    "all_nodes_claim_eligible": true
+  },
+  "reconciliation_recording": "ternary",
+  "H_A_given_B": 0.25,
+  "H_A_given_C": 0.25,
+  "EC_cost": 0.250000000001,
+  "raw_key_rate_lower": -0.2582662228324026,
+  "key_rate_lower": 0.0,
+  "claim_eligible": true,
+  "target_file": "targets/nu1_s1_eb0p75_ec0p75_th0p643501.json",
+  "target_sha256": "0beaccc34a9100e17db2da77cb2e39d5a027600fca973ec4f7975944a8c4fb4d",
+  "experiment_id": "protocol_curve_anchors",
+  "run_signature": "7c889ca3e909414f41e1d0d65031f93e26a7103b47f3ad1c8c24fd5deb0b75f5",
+  "run_contract_sha256": "1ac0295de42c76c6d8e33bea486e5dc24cc03490e01bab51ffdaced8f4e3230f",
+  "created_utc": "2026-10-27T06:18:23.115217Z",
+  "source_file": "raw/protocol_curve_anchors/eta0p75_rHybrid_long_only_ternary_nu1_s1_eb0p75_ec0p75_th0p643501_L2_m4.json"
+}

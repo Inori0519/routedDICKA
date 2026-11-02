@@ -1,0 +1,241 @@
+{
+  "schema_version": 2,
+  "description": "Certificate-led ternary-output routed DICKA manuscript suite.",
+  "solver": {
+    "name": "mosek",
+    "level": 2,
+    "radau_nodes": 4,
+    "relative_gap_tolerance": 1e-7,
+    "primal_feasibility_tolerance": 1e-7,
+    "dual_feasibility_tolerance": 1e-7,
+    "max_iterations": 500,
+    "threads": 0,
+    "numerical_guard": 1e-7,
+    "max_accepted_primal_dual_gap": 5e-5
+  },
+  "common_target": {
+    "eta_a": 1.0,
+    "eta_b_equals_eta_c": true,
+    "far_angle_policy": "matched",
+    "near_angle_policy": "matched",
+    "source_model": "global_white_noise",
+    "near_no_click": "bin_to_plus",
+    "far_no_click": "retain_perp",
+    "key_setting": ["Z", "Z", "Z"]
+  },
+  "reference_points": {
+    "S1": {
+      "purpose": "strict_same_point_separation",
+      "protocol": "rHybrid",
+      "nu": 0.99,
+      "eta_s": 0.99,
+      "eta_l": 0.78,
+      "theta": 0.6624262938331512,
+      "routed_evidence": "verified_affine_certificate",
+      "long_only_evidence": "exact_receiver_simulation_attack"
+    },
+    "S2": {
+      "purpose": "representative_protocol_comparison",
+      "nu": 0.99,
+      "eta_s": 0.99,
+      "eta_l": 0.80
+    },
+    "S3": {
+      "purpose": "mwrf_mechanism",
+      "nu": 1.0,
+      "eta_s": 1.0,
+      "eta_l": 0.90
+    }
+  },
+  "profiles": {
+    "smoke0": [],
+    "smoke1": [
+      "reduced_smoke_rphase",
+      "reduced_smoke_rpchsh"
+    ],
+    "smoke2": [
+      "mwrf_smoke"
+    ],
+    "core": [
+      "reduced_radau_audit"
+    ],
+    "paper": [
+      "protocol_curve_anchors",
+      "recording_anchors",
+      "mwrf_primary",
+      "reduced_radau_audit"
+    ]
+  },
+  "experiments": {
+    "reduced_smoke_rphase": {
+      "kind": "reduced_point",
+      "point_id": "S1_rPhase",
+      "protocol": "rPhase",
+      "scope": "near_phase",
+      "nu": 0.99,
+      "eta_s": 0.99,
+      "eta_l": 0.78,
+      "m": 2,
+      "recording": "ternary"
+    },
+    "reduced_smoke_rpchsh": {
+      "kind": "reduced_point",
+      "point_id": "easy_rPCHSH",
+      "protocol": "rPCHSH",
+      "scope": "near_tilted",
+      "nu": 1.0,
+      "eta_s": 1.0,
+      "eta_l": 0.90,
+      "m": 2,
+      "recording": "ternary"
+    },
+    "mwrf_smoke": {
+      "kind": "mwrf",
+      "point_id": "S3_smoke",
+      "models": ["F"],
+      "attack_models": ["M"],
+      "nu": 1.0,
+      "eta_s": 1.0,
+      "eta_l": 0.90,
+      "m": 2,
+      "recording": "ternary"
+    },
+    "protocol_curve_anchors": {
+      "kind": "reduced_curve_matrix",
+      "eta_l": [0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0],
+      "m": 4,
+      "allow_m_override": false,
+      "recording": "ternary",
+      "slices": [
+        {
+          "slice_id": "routed_nu1_s1",
+          "nu": 1.0,
+          "eta_s": 1.0,
+          "include_near": true,
+          "protocols": ["rPCHSH"]
+        },
+        {
+          "slice_id": "routed_nu1_s0p99",
+          "nu": 1.0,
+          "eta_s": 0.99,
+          "include_near": true,
+          "protocols": ["rPCHSH", "rPhase", "rHybrid"]
+        },
+        {
+          "slice_id": "routed_nu1_s0p98",
+          "nu": 1.0,
+          "eta_s": 0.98,
+          "include_near": true,
+          "protocols": ["rPCHSH", "rPhase", "rHybrid"]
+        },
+        {
+          "slice_id": "routed_nu1_s0p97",
+          "nu": 1.0,
+          "eta_s": 0.97,
+          "include_near": true,
+          "protocols": ["rPCHSH", "rPhase", "rHybrid"]
+        },
+        {
+          "slice_id": "routed_nu0p99_s0p99",
+          "nu": 0.99,
+          "eta_s": 0.99,
+          "include_near": true,
+          "protocols": ["rPCHSH", "rPhase", "rHybrid"]
+        },
+        {
+          "slice_id": "long_only_nu1",
+          "nu": 1.0,
+          "eta_s": 1.0,
+          "include_near": false,
+          "protocols": ["rPCHSH", "rPhase", "rHybrid"]
+        }
+      ]
+    },
+    "recording_anchors": {
+      "kind": "reduced_recording_ablation",
+      "protocol": "rHybrid",
+      "nu": 0.99,
+      "eta_s": 0.99,
+      "eta_l": [0.78, 0.85, 0.95],
+      "m": 2,
+      "allow_m_override": false,
+      "statistics_recordings": ["binary", "ternary"],
+      "report_modes": [
+        "binary_statistics_binary_reconciliation",
+        "binary_statistics_ternary_reconciliation",
+        "ternary_statistics_ternary_reconciliation"
+      ]
+    },
+    "mwrf_primary": {
+      "kind": "mwrf",
+      "point_id": "S3",
+      "models": ["W", "F"],
+      "attack_models": ["M", "R"],
+      "nu": 1.0,
+      "eta_s": 1.0,
+      "eta_l": 0.90,
+      "m": 2,
+      "allow_m_override": false,
+      "recording": "ternary"
+    },
+    "reduced_radau_audit": {
+      "kind": "reduced_radau_sensitivity",
+      "point_id": "S1_rPhase",
+      "protocol": "rPhase",
+      "nu": 0.99,
+      "eta_s": 0.99,
+      "eta_l": 0.78,
+      "m_values": [2, 3, 4],
+      "allow_m_override": false,
+      "recording": "ternary"
+    }
+  },
+  "analytic_curves": {
+    "ideal": {
+      "protocols": ["rPhase", "rHybrid"],
+      "eta_min": 0.6,
+      "eta_max": 1.0,
+      "plot_points": 201
+    },
+    "certificate_plot_grid": {
+      "eta_min": 0.6,
+      "eta_max": 1.0,
+      "plot_points": 201
+    }
+  },
+  "curve_plots": {
+    "figure_stems": [
+      "routed_vs_long_only_rpchsh",
+      "routed_vs_long_only_rphase",
+      "routed_vs_long_only_rhybrid",
+      "routed_protocols_near_efficiency",
+      "routed_protocols_visibility"
+    ],
+    "per_protocol_eta_s": [1.0, 0.99, 0.98, 0.97],
+    "cross_protocol_eta_s": [1.0, 0.98, 0.97],
+    "visibility_values": [1.0, 0.99],
+    "visibility_eta_s": 0.99
+  },
+  "external_archives": {
+    "v21_attack": "source_data/attack/attack_eta078.json",
+    "v21_routed_certificate": "source_data/certificates/archived_m2/near_m2_certificate.json",
+    "v21_routed_affine": "source_data/certificates/archived_m2/near_m2.affine.json",
+    "v21_routed_m4_node0_certificate": "source_data/certificates/m4/node_0.certificate.json",
+    "v21_routed_m4_node0_affine": "source_data/certificates/m4/node_0.affine.json",
+    "v21_routed_m4_node1_certificate": "source_data/certificates/m4/node_1.certificate.json",
+    "v21_routed_m4_node1_affine": "source_data/certificates/m4/node_1.affine.json",
+    "v21_routed_m4_node2_certificate": "source_data/certificates/m4/node_2.certificate.json",
+    "v21_routed_m4_node2_affine": "source_data/certificates/m4/node_2.affine.json"
+  },
+  "scientific_gates": {
+    "minimum_positive_rate": 1e-6,
+    "require_exact_long_only_attack": true,
+    "require_verified_routed_certificate": true,
+    "mwrf_expected_counts": {
+      "M": 89,
+      "W": 92,
+      "R": 146,
+      "F": 149
+    }
+  }
+}
